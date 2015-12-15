@@ -73,6 +73,27 @@ end
 
 
 
+function HandleFlipCommand(a_Split, a_Player)
+	-- //flip [-p] [direction]
+	
+	-- Check if there's anything in the clipboard:
+	local State = GetPlayerState(a_Player)
+	if not(State.Clipboard:IsValid()) then
+		a_Player:SendMessage(cChatColor.Rose .. "Your clipboard is empty. Use //copy or //cut first.")
+		return true
+	end
+	
+	-- Check for parameters
+	-- @see HandleStackCommand in Region.lua for direction handling.
+	
+	-- still a stub
+	return false
+end
+
+
+
+
+
 function HandlePasteCommand(a_Split, a_Player)
 	-- //paste
 
